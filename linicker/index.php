@@ -4,7 +4,9 @@
 	require_once 'conn.php';
 
 	$obj = new conn;
-	$obj->select();
+	$qry = "select * from aluno";
+	$obj->exeQuery($qry);
+
 
 
 

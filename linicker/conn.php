@@ -7,7 +7,7 @@
 			$this->host = "localhost";
 				$this->user = "root";
 				$this->senha = "1q";
-				$this->banco = "bd";
+				$this->banco = "escola";
 
 				self::start();
 		}
@@ -20,11 +20,15 @@
 		}	
 
 
-		function exeQuery(){
-			var_dump($this->con);
-//			$this->query 
-//			$alunos =	$this->con->prepare("SELECT * FROM alunos");
-//			$alunos->execute();
+		function exeQuery($qry){
+//			var_dump($this->con);
+
+//			$this->query = mysqli_query($this->conn, $qry);
+//			return $this->query;  
+
+			$this->con->query($qry);
+			return $this->con;
+
 //			var_dump($alunos->fetchAll());
 		}
 	}
